@@ -1,0 +1,44 @@
+import React, { useMemo, useEffect, useRef } from 'react'
+import { useGraph } from '@react-three/fiber'
+import { useGLTF, useAnimations } from '@react-three/drei'
+import { SkeletonUtils } from 'three-stdlib'
+
+export default function Yassine(props) {
+  const group = useRef()
+  const { scene, animations } = useGLTF('/glb/yassine.glb')
+  const clone = useMemo(() => SkeletonUtils.clone(scene), [scene])
+  const { nodes, materials } = useGraph(clone)
+  const { actions } = useAnimations(animations, group)
+
+  useEffect(() => {
+    if (actions && Object.keys(actions).length > 0) {
+      const firstAction = actions[Object.keys(actions)[0]]
+      firstAction.reset().fadeIn(0.5).play()
+    }
+
+    clone.traverse((child) => {
+      if (child.isMesh) {
+        child.castShadow = true
+        child.receiveShadow = true
+      }
+    })
+  }, [actions, clone])
+
+  return (
+    <group ref={group} {...props} dispose={null}>
+      <group name="Scene">
+        <group name="Armature">
+          <primitive object={nodes.Hips} />
+          <skinnedMesh name="avaturn_body" geometry={nodes.avaturn_body.geometry} material={materials.avaturn_body_material} skeleton={nodes.avaturn_body.skeleton} />
+          <skinnedMesh name="avaturn_hair_0" geometry={nodes.avaturn_hair_0.geometry} material={materials.avaturn_hair_0_material} skeleton={nodes.avaturn_hair_0.skeleton} />
+          <skinnedMesh name="avaturn_hair_1" geometry={nodes.avaturn_hair_1.geometry} material={materials.avaturn_hair_1_material} skeleton={nodes.avaturn_hair_1.skeleton} />
+          <skinnedMesh name="avaturn_shoes_0" geometry={nodes.avaturn_shoes_0.geometry} material={materials.avaturn_shoes_0_material} skeleton={nodes.avaturn_shoes_0.skeleton} />
+          <skinnedMesh name="avaturn_look_0" geometry={nodes.avaturn_look_0.geometry} material={materials.avaturn_look_0_material} skeleton={nodes.avaturn_look_0.skeleton} />
+          <skinnedMesh name="avaturn_look_1" geometry={nodes.avaturn_look_1.geometry} material={materials.avaturn_look_1_material} skeleton={nodes.avaturn_look_1.skeleton} />
+        </group>
+      </group>
+    </group>
+  )
+}
+
+useGLTF.preload('/glb/yassine.glb')
