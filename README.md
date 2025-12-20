@@ -22,7 +22,22 @@ Three.js / React-Three-Fiber: Powering the 3D engine and scene rendering.
 
 Drei: To simplify 3D helpers like OrbitControls and GLTF loading.
 
+![3d_demo](./demos/3d_demo.gif)
+
 ### The "OS" Logic
 Tailwind / CSS-in-JS: For the retro window management and CRT screen effects.
 
 EmailJS: Handling real-time contact form submissions directly from the virtual desktop.
+
+![os_demo](./demos/os_demo.gif)
+## 🚀 Quick Start
+Want to see how the "under the hood" logic works?
+
+Clone the repo:
+`git clone https://github.com/Yassine020528/3D-Portfolio.git`
+Install dependencies:
+`npm install`
+Run locally:
+`npm run dev`
+
+
