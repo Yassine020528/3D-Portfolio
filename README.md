@@ -35,9 +35,9 @@ Want to see how the "under the hood" logic works?
 
 Clone the repo:
 `git clone https://github.com/Yassine020528/3D-Portfolio.git`
+
 Install dependencies:
 `npm install`
+
 Run locally:
 `npm run dev`
-
-
