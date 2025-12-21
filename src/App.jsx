@@ -334,11 +334,42 @@ export default function App() {
                 padding: '5px 10px',
                 whiteSpace: 'nowrap',
                 userSelect: 'none',
-                pointerEvents: 'none', // Lets clicks pass through to the model
+                pointerEvents: 'none', 
                 border: '1px solid white',
                 animation: 'bounce 2s infinite'
               }}>
                 CLICK ON MY AVATAR
+                <div style={{ fontSize: '20px', marginTop: '-5px' }}>▾</div>
+                
+                <style>{`
+                  @keyframes bounce {
+                    0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+                    40% {transform: translateY(-10px);}
+                    60% {transform: translateY(-5px);}
+                  }
+                `}</style>
+              </div>
+            </Html>
+          )}
+          {started && view === 'room' && !showBio && (
+            <Html position={[-3, 120, 30]} center distanceFactor={150}>
+              <div style={{
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
+                color: 'white',
+                fontFamily: 'monospace',
+                fontSize: '14px',
+                fontWeight: 'bold',
+                backgroundColor: 'black',
+                padding: '5px 10px',
+                whiteSpace: 'nowrap',
+                userSelect: 'none',
+                pointerEvents: 'none', 
+                border: '1px solid white',
+                animation: 'bounce 2s infinite'
+              }}>
+                CLICK ON THE COMPUTER
                 <div style={{ fontSize: '20px', marginTop: '-5px' }}>▾</div>
                 
                 <style>{`
