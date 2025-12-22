@@ -247,6 +247,23 @@ function ShadowFloor() {
     </mesh>
   );
 }
+function OccludedHtml({ children, ...props }) {
+  const [hidden, setHidden] = useState(false);
+  return (
+    <Html
+      {...props}
+      occlude
+      onOcclude={setHidden}
+      style={{
+        transition: 'opacity 0.2s',
+        opacity: hidden ? 0 : 1,
+        pointerEvents: hidden ? 'none' : 'auto',
+      }}
+    >
+      {children}
+    </Html>
+  );
+}
 
 export default function App() {
   const [started, setStarted] = useState(false);
@@ -321,7 +338,7 @@ export default function App() {
             onPointerOut={() => (document.body.style.cursor = 'auto')}
           />
           {started && view === 'room' && !showBio && (
-            <Html position={[130, 155, 60]} center distanceFactor={150}>
+            <OccludedHtml position={[130, 155, 60]} center distanceFactor={150}>
               <div style={{
                 display: 'flex',
                 flexDirection: 'column',
@@ -349,10 +366,10 @@ export default function App() {
                   }
                 `}</style>
               </div>
-            </Html>
+            </OccludedHtml>
           )}
           {started && view === 'room' && !showBio && (
-            <Html position={[-3, 120, 30]} center distanceFactor={150}>
+            <OccludedHtml position={[-3, 120, 30]} center distanceFactor={150}>
               <div style={{
                 display: 'flex',
                 flexDirection: 'column',
@@ -380,7 +397,7 @@ export default function App() {
                   }
                 `}</style>
               </div>
-            </Html>
+            </OccludedHtml>
           )}
         </Suspense>
         
