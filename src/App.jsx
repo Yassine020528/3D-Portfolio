@@ -21,7 +21,10 @@ function LoadingScreen({ onStarted }) {
       </div>
       {progress === 100 && (
         <button 
-          onClick={onStarted}
+          onClick={() => {
+            playClickSound();
+            onStarted();
+          }}
           style={{ background: 'transparent', color: 'white', border: '1px solid white', padding: '10px 30px', fontFamily: 'monospace', fontSize: '18px', cursor: 'pointer', fontWeight: 'bold' }}
           onMouseEnter={(e) => (e.target.style.background = 'white') && (e.target.style.color = 'black')}
           onMouseLeave={(e) => (e.target.style.background = 'transparent') && (e.target.style.color = 'white')}
@@ -131,6 +134,7 @@ function Overlay({ visible, view, setView }) {
   }, [view]);
 
   const toggleSound = () => {
+    playClickSound();
     if (!soundEnabled) { playAudio(); setSoundEnabled(true); } 
     else { stopAudio(); setSoundEnabled(false); }
   };
@@ -266,6 +270,10 @@ function OccludedHtml({ children, ...props }) {
     </Html>
   );
 }
+const playClickSound = () => {
+    const clickSound = new Audio('/sounds/click.mp3');
+    clickSound.play().catch(e => console.error(e));
+};
 
 function Home(){
   const [started, setStarted] = useState(false);
@@ -277,16 +285,11 @@ function Home(){
 
   const toggleBio = (e) => {
     if (e) e.stopPropagation();
-    const audio = new Audio('/sounds/click.mp3');
-    audio.volume = 0.5;
-    audio.play().catch(err => console.error(err));
+    playClickSound();
     setShowBio(!showBio);
   };
 
   const handleStart = () => {
-    const startAudio = new Audio('/sounds/start.mp3');
-    startAudio.volume = 0.5;
-    startAudio.play().catch(e => console.error(e));
     setStarted(true);
   };
 

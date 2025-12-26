@@ -2,6 +2,10 @@ import { useNavigate } from 'react-router-dom';
 import React, {useEffect, useState, useRef } from 'react';
 
 export default function NotFound() {
+    const playClickSound = () => {  
+        const clickAudio = new Audio('/sounds/click.mp3');
+        clickAudio.play().catch(err => console.error(err));
+    };
     const navigate = useNavigate();
     function SpeakerIcon({ enabled }) {
         return (
@@ -98,6 +102,7 @@ export default function NotFound() {
       });
     
       const toggleSound = () => {
+        playClickSound();
         if (!soundEnabled) { playAudio(); setSoundEnabled(true); } 
         else { stopAudio(); setSoundEnabled(false); }
       };
@@ -127,7 +132,7 @@ export default function NotFound() {
             SYSTEM ERROR: PAGE_NOT_FOUND
             </h1>
             <button 
-            onClick={() => navigate('/')}
+            onClick={() => { playClickSound(); navigate('/'); }}
             style={{ background: 'transparent', color: 'white', border: '1px solid white', padding: '10px 30px', fontFamily: 'monospace', fontSize: '18px', cursor: 'pointer', fontWeight: 'bold' }}
             onMouseEnter={(e) => (e.target.style.background = 'white') && (e.target.style.color = 'black')}
             onMouseLeave={(e) => (e.target.style.background = 'transparent') && (e.target.style.color = 'white')}
