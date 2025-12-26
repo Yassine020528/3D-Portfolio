@@ -6,6 +6,8 @@ import ComputerModel from './ComputerModel';
 import Yassine from './Yassine';
 import Bio from './Bio';
 import ComputerOS from './ComputerOS';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import NotFound from './NotFound';
 
 function LoadingScreen({ onStarted }) {
   const { progress } = useProgress();
@@ -265,7 +267,7 @@ function OccludedHtml({ children, ...props }) {
   );
 }
 
-export default function App() {
+function Home(){
   const [started, setStarted] = useState(false);
   const [view, setView] = useState('room'); 
   const [isReturning, setIsReturning] = useState(false);
@@ -427,5 +429,17 @@ export default function App() {
         <Environment preset="city" />
       </Canvas>
     </div>
+  );
+}
+
+export default function App() {
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+    </Router>
   );
 }
