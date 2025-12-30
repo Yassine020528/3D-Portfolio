@@ -85,7 +85,7 @@ export default function NotFound() {
         };
       }, []);
      
-    
+      useEffect(() => { playAudio(); }); 
       useEffect(() => {
         if (!audioCtxRef.current || !filterNodeRef.current) return;
         const ctx = audioCtxRef.current;
