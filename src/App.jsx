@@ -72,7 +72,7 @@ function Overlay({ visible, view, setView }) {
 
     gainNodeRef.current.gain.cancelScheduledValues(ctx.currentTime);
     gainNodeRef.current.gain.setValueAtTime(0, ctx.currentTime);
-    gainNodeRef.current.gain.linearRampToValueAtTime(0.1, ctx.currentTime + 2);
+    gainNodeRef.current.gain.linearRampToValueAtTime(0.5, ctx.currentTime + 2);
   };
 
   const stopAudio = () => {
