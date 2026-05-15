@@ -20,7 +20,7 @@ Visitors can:
 - Chat with an AI portfolio assistant
 - Launch built-in games including Flappy Bird and Minesweeper
 - Switch between multiple desktop themes
-- Toggle ambient and UI sound effects
+- Open the SSH portfolio command page from the projects window
 
 ![OS demo](./demos/os_demo.gif)
 
@@ -43,15 +43,17 @@ Visitors can:
 - Theme presets: `dark`, `light`, `matrix`, and `cyber`
 - Live clock and browser battery status support when available
 - Interactive desktop cat with sit, stand, and sleep states
-- Terminal commands for `about`, `projects`, `contact`, `games`, `mobile`, `flower`, `vscode`, `chatbot`, `recycle`, `clear`, and `exit`
+- Terminal commands for `help`, `about`, `projects`, `contact`, `games`, `mobile`, `flower`, `vscode`, `chatbot`, `recycle`, `whoami`, `clear`, and `exit`
+- Simulated terminal guidance when visitors try `ssh ssh.yassineabassi.com` inside the browser OS
 
 ### Media and Interaction
 
-- Ambient audio and interface sound effects
+- Interface, cat, keyboard, game, and flower audio effects
 - Contact form powered by EmailJS
 - Resume PDF and project/media assets served from `public/`
 - Fullscreen project, mobile app, game, and about-image previews
 - Responsive room controls for mouse, scroll, touch drag, and pinch zoom
+- Dedicated `/ssh` page showing `ssh ssh.yassineabassi.com` with copy-to-clipboard support
 
 ### AI Portfolio Assistant
 
@@ -71,6 +73,7 @@ Visitors can:
 - Supports uploaded images that can be transformed through the same visual pipeline
 - Combines easing functions, trigonometry, manual 3D rotation, and perspective scaling to animate bloom, rotation, and wilting
 - Shapes petals, leaves, and sepals mathematically with layered polar placement, sine-based deformation, and Bezier curves
+- Includes its own looped flower music inside the flower experience
 
 ## Tech Stack
 
@@ -101,16 +104,16 @@ src/
     flower/        Procedural flower renderer and controls
     os/            Desktop OS shell, state, and interaction logic
     os/windows/    App windows 
-  hooks/           Reusable interaction and audio hooks
+  hooks/           Reusable clock and window-manager hooks
   lib/             Sound helpers
-  pages/           Route-level pages
+  pages/           Home, SSH command, and not-found route pages
 public/
   flappy/          Flappy Bird sprite and audio assets
   glb/             3D models
   images/          Project and gallery images
   logos/           Tech and app logos
   minesweeper/     Minesweeper board and sprite assets
-  sounds/          Ambient and UI audio
+  sounds/          UI, keyboard, cat, power, and flower audio
 demos/
   *.gif            README preview assets
 ```
