@@ -2,7 +2,7 @@ import useClock from '../../hooks/useClock';
 
 export default function StatusOverlay({
   visible,
-  subtitle = 'Computer Engineering Student',
+  subtitle = 'Computer Engineering',
 }) {
   const time = useClock();
 
