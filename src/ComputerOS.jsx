@@ -205,6 +205,9 @@ export default function ComputerOS({ onExit }) {
       case 'whoami':
         response = 'guest@portfolio_os';
         break;
+      case 'ssh ssh.yassineabassi.com':
+        response = 'This terminal is only a simulated shell. To connect to the SSH portfolio, run this command in your real machine\'s terminal instead.';
+        break;
       default:
         response = `Command not found: ${normalizedCommand}`;
     }
