@@ -1,4 +1,5 @@
 import { projects } from '../../../data/osData';
+import ExternalLinkButton from '../ExternalLinkButton';
 import FigureThumbnail from '../FigureThumbnail';
 import WindowFrame from '../WindowFrame';
 
@@ -56,6 +57,11 @@ export default function ProjectsWindow({ windowState, controls, expandedProjectI
                       <img key={`${project.title}-${index}`} src={logo} alt={`Logo ${index}`} style={{ height: '24px', width: 'auto', backgroundColor: '#ffffff', padding: '2px', borderRadius: '4px' }} />
                     ))}
                   </div>
+                  {project.actionHref && (
+                    <div style={{ marginTop: '14px' }}>
+                      <ExternalLinkButton href={project.actionHref} label={project.actionLabel} compact />
+                    </div>
+                  )}
                 </div>
               </div>
             </div>

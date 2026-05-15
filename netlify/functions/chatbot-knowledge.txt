@@ -22,9 +22,8 @@
 * Android Mobile Applications (3 apps): Finance tracker with MVVM, Room persistence, and Material 3 Adaptive layouts; Bluetooth device tracker with GPS trajectories, Maps SDK, and Coroutines; location-based running-walking app with Retrofit/OkHttp networking, Firebase cloud synchronization, and Compose Navigation.
 * School Tracker iOS Application: iOS app in SwiftUI for tracking classes and coursework with weighted progress and grade calculations, calendar-based deadline planning aggregating due dates across all classes, and on-device persistence via UserDefaults with Codable JSON encoding.
 * PolyHacks 2025 — Built WildGuard, an AI ecological monitoring system using YOLOv8 for real-time wildlife recognition on live video.
-
-# Yassine's 3D Interactive Portfolio
-An immersive portfolio built as a navigable 3D room with a fully interactive desktop experience inside the computer screen.
+* Yassine's 3D Interactive Portfolio: An immersive portfolio built as a navigable 3D room with a fully interactive desktop experience inside the computer screen.
+* SSH Terminal Portfolio: an SSH-based interactive terminal portfolio using Go and the Charm ecosystem (Wish, Bubble Tea, Lip Gloss), featuring animated splash screens, keyboard navigation, and dynamic theme switching.
 
 ## Overview
 

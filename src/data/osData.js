@@ -194,6 +194,17 @@ export const projects = [
     logos: ['/logos/html.svg', '/logos/css.svg', '/logos/javascript.svg', '/logos/react.svg', '/logos/threejs.svg', '/logos/upstash.svg'],
     caption: 'Feels weird,\nweirdly familiar.',
   },
+  {
+    id: 7,
+    title: 'SSH Terminal Portfolio ',
+    tech: 'Go, Bubble Tea, Lip Gloss, Wish, Docker, Fly.io',
+    description: 'Built an SSH-based interactive terminal portfolio using Go and the Charm ecosystem (Wish, Bubble Tea, Lip Gloss), featuring animated splash screens, keyboard navigation, and dynamic theme switching.',
+    image: '/images/ssh.png',
+    logos: ['/logos/go.svg', '/logos/bubble-tea.svg', '/logos/lip-gloss.svg', '/logos/wish.svg', '/logos/docker.svg', '/logos/fly-io.svg'],
+    caption: 'sshhh...\nit\'s a secret',
+    actionLabel: 'View Command',
+    actionHref: '/ssh',
+  },
 ];
 
 export const games = [
