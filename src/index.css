@@ -122,6 +122,14 @@ body, html {
   overflow-wrap: anywhere;
 }
 
+.ssh-page__fingerprint strong {
+  color: white;
+  font-weight: 900;
+  background: rgba(255, 255, 255, 0.16);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  padding: 1px 5px;
+}
+
 @media (max-width: 640px) {
   .system-screen {
     padding: 20px;

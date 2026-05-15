@@ -59,6 +59,7 @@ export default function SshPage() {
         <span>$</span>
         <code>{SSH_COMMAND}</code>
       </div>
+      <p className="system-screen__eyebrow ssh-page__fingerprint">When asked to add the key fingerprint, type <strong>yes</strong> and press <strong>enter ↵</strong>.</p>
 
       <div className="system-screen__actions">
         <SystemButton onClick={handleCopy}>
