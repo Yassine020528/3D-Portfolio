@@ -6,6 +6,7 @@ import SystemScreen from '../components/shared/SystemScreen';
 import { playClickSound } from '../lib/sound';
 
 const SSH_COMMAND = 'ssh ssh.yassineabassi.com';
+const SSH_RESTRICTED_NETWORK_COMMAND = 'ssh -p 443 ssh.yassineabassi.com';
 
 async function copyText(text) {
   if (navigator.clipboard?.writeText) {
@@ -26,25 +27,25 @@ async function copyText(text) {
 
 export default function SshPage() {
   const navigate = useNavigate();
-  const [copied, setCopied] = useState(false);
+  const [copiedCommand, setCopiedCommand] = useState(null);
   const copyResetTimeout = useRef(null);
 
   useEffect(() => () => {
     window.clearTimeout(copyResetTimeout.current);
   }, []);
 
-  const handleCopy = async () => {
+  const handleCopy = async (command) => {
     playClickSound();
 
     try {
-      await copyText(SSH_COMMAND);
-      setCopied(true);
+      await copyText(command);
+      setCopiedCommand(command);
       window.clearTimeout(copyResetTimeout.current);
       copyResetTimeout.current = window.setTimeout(() => {
-        setCopied(false);
+        setCopiedCommand(null);
       }, 5000);
     } catch {
-      setCopied(false);
+      setCopiedCommand(null);
     }
   };
 
@@ -55,16 +56,38 @@ export default function SshPage() {
         Copy this command on your machine&apos;s terminal:
       </p>
 
-      <div className="ssh-page__command" aria-label={SSH_COMMAND}>
-        <span>$</span>
-        <code>{SSH_COMMAND}</code>
+      <div className="ssh-page__command-row">
+        <div className="ssh-page__command" aria-label={SSH_COMMAND}>
+          <span>$</span>
+          <code>{SSH_COMMAND}</code>
+        </div>
+        <SystemButton
+          className="ssh-page__copy-button"
+          aria-label="Copy standard SSH command"
+          onClick={() => handleCopy(SSH_COMMAND)}
+        >
+          {copiedCommand === SSH_COMMAND ? '[ COPIED ]' : '[ COPY ]'}
+        </SystemButton>
+      </div>
+      <p className="ssh-page__instruction ssh-page__instruction--alternate">
+        If you&apos;re on a restricted network (café, school...):
+      </p>
+      <div className="ssh-page__command-row ssh-page__command-row--alternate">
+        <div className="ssh-page__command" aria-label={SSH_RESTRICTED_NETWORK_COMMAND}>
+          <span>$</span>
+          <code>{SSH_RESTRICTED_NETWORK_COMMAND}</code>
+        </div>
+        <SystemButton
+          className="ssh-page__copy-button"
+          aria-label="Copy restricted network SSH command"
+          onClick={() => handleCopy(SSH_RESTRICTED_NETWORK_COMMAND)}
+        >
+          {copiedCommand === SSH_RESTRICTED_NETWORK_COMMAND ? '[ COPIED ]' : '[ COPY ]'}
+        </SystemButton>
       </div>
       <p className="system-screen__eyebrow ssh-page__fingerprint">When asked to add the key fingerprint, type <strong>yes</strong> and press <strong>enter ↵</strong>.</p>
 
       <div className="system-screen__actions">
-        <SystemButton onClick={handleCopy}>
-          {copied ? '[ COPIED ]' : '[ COPY COMMAND ]'}
-        </SystemButton>
         <SystemButton
           onClick={() => {
             playClickSound();
