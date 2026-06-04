@@ -205,6 +205,15 @@ export const projects = [
     actionLabel: 'View Command',
     actionHref: '/ssh',
   },
+  {
+    id: 8,
+    title: 'Corporate LinkedIn Translator Chrome Extension',
+    tech: 'Node.js, Express, Docker, Fly.io',
+    description: 'Developed a Chrome extension that translates corporate jargon on LinkedIn posts into satire plain language with inline tooltip annotations. Architected a full backend API on Fly.io with rate limiting, graceful error handling, and dynamic DOM injection via a MutationObserver to handle LinkedIn’s React SPA structure.',
+    image: '/images/extension.png',
+    logos: ['/logos/nodejs.svg', '/logos/express.svg', '/logos/docker.svg', '/logos/fly-io.svg'],
+    caption: 'Whatever makes\nyou sleep at night.',
+  },
 ];
 
 export const games = [
