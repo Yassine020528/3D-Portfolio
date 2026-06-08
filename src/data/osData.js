@@ -74,6 +74,18 @@ export const aboutFigures = [
 
 export const experienceEntries = [
   {
+    version: '[v1.1] Software Developer - Capstone Project',
+    date: 'Jan 2026 - May 20266',
+    location: '@ Hydro-Quebec',
+    accent: true,
+    bullets: [
+      'Built a full-stack weather platform (Angular / ASP.NET Core).',
+      'Implemented GDAL raster processing, and Docker containerization.',
+    ],
+    logo: '/logos/hydroquebec.svg',
+    link: 'https://hydroquebec.com',
+  },
+  {
     version: '[v1.0] Software Quality Assurance Intern',
     date: 'May 2024 - Sep 2024',
     location: '@ UpToTest',
@@ -82,7 +94,8 @@ export const experienceEntries = [
       'Designed, automated, and maintained e2e test cases',
       'Used Cypress with Cucumber within a full BDD workflow',
     ],
-    logos: ['/logos/cypress.svg', '/logos/cucumber.svg'],
+    logo: '/logos/uptotest.svg',
+    link: 'https://uptotest.com',
   },
   {
     version: '[v2.0] Private Tutor',

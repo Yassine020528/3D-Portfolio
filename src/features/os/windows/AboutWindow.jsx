@@ -82,22 +82,24 @@ export default function AboutWindow({ windowState, controls, onOpenFigure }) {
               <strong style={{ color: '#fff' }}>{entry.version}</strong>
               <span style={{ opacity: 0.6 }}>{entry.date}</span>
             </div>
-            <div style={{ color: 'var(--accent-color)', fontSize: '0.85rem' }}>{entry.location}</div>
+            <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+              <div style={{ color: 'var(--accent-color)', fontSize: '0.85rem' }}>{entry.location}</div>
+              {entry.logo? (
+                  <li style={{ display: 'flex', alignItems: 'center', gap: '10px', marginTop: '5px' }}>
+                    <a href={entry.link} target="_blank" rel="noreferrer">
+                      <img
+                        key={entry.logo}
+                        src={entry.logo}
+                          alt=""
+                          aria-hidden="true"
+                          style={{ height: '20px', width: 'auto', backgroundColor: '#ffffff', padding: '2px', borderRadius: '4px' }}
+                        />
+                    </a>
+                  </li>
+                ) : null}
+            </div>
             <ul style={{ margin: '5px 0', paddingLeft: '20px', fontSize: '0.85rem', opacity: 0.9, listStyleType: 'square' }}>
               {entry.bullets.map((bullet) => <li key={bullet}>{bullet}</li>)}
-              {entry.logos?.length ? (
-                <li style={{ display: 'flex', alignItems: 'center', gap: '10px', marginTop: '5px' }}>
-                  {entry.logos.map((logo) => (
-                    <img
-                      key={logo}
-                      src={logo}
-                      alt=""
-                      aria-hidden="true"
-                      style={{ height: '20px', width: 'auto', backgroundColor: '#ffffff', padding: '2px', borderRadius: '4px' }}
-                    />
-                  ))}
-                </li>
-              ) : null}
             </ul>
           </div>
         ))}
