@@ -80,7 +80,7 @@ export const experienceEntries = [
     accent: false,
     bullets: [
       'Built a full-stack weather platform (Angular / ASP.NET Core).',
-      'Implemented GDAL raster processing, and Docker containerization.',
+      'Implemented GDAL raster processing and Docker containerization.',
     ],
     logo: '/logos/hydroquebec.svg',
     link: 'https://hydroquebec.com',
