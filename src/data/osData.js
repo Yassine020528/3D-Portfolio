@@ -91,8 +91,8 @@ export const experienceEntries = [
     location: '@ UpToTest',
     accent: false,
     bullets: [
-      'Designed, automated, and maintained e2e test cases',
-      'Used Cypress with Cucumber within a full BDD workflow',
+      'Designed, automated, and maintained e2e test cases.',
+      'Used Cypress with Cucumber within a full BDD workflow.',
     ],
     logo: '/logos/uptotest.svg',
     link: 'https://uptotest.com',
