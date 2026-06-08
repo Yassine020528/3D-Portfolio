@@ -77,7 +77,7 @@ export const experienceEntries = [
     version: '[v1.1] Software Developer - Capstone Project',
     date: 'Jan 2026 - May 20266',
     location: '@ Hydro-Quebec',
-    accent: true,
+    accent: false,
     bullets: [
       'Built a full-stack weather platform (Angular / ASP.NET Core).',
       'Implemented GDAL raster processing, and Docker containerization.',
@@ -89,7 +89,7 @@ export const experienceEntries = [
     version: '[v1.0] Software Quality Assurance Intern',
     date: 'May 2024 - Sep 2024',
     location: '@ UpToTest',
-    accent: true,
+    accent: false,
     bullets: [
       'Designed, automated, and maintained e2e test cases',
       'Used Cypress with Cucumber within a full BDD workflow',
@@ -101,7 +101,7 @@ export const experienceEntries = [
     version: '[v2.0] Private Tutor',
     date: 'Aug 2021 - Present',
     location: '@ Montreal, QC',
-    accent: false,
+    accent: true,
     bullets: [
       'Provided academic support to college and university students.',
       'Helped learners with mathematics, physics, programming.',
