@@ -76,7 +76,7 @@ export const experienceEntries = [
   {
     version: '[v1.1] Software Developer - Capstone Project',
     date: 'Jan 2026 - May 20266',
-    location: '@ Hydro-Quebec',
+    location: '@ Hydro-Québec',
     accent: false,
     bullets: [
       'Built a full-stack weather platform (Angular / ASP.NET Core).',
