@@ -192,10 +192,10 @@ export const projects = [
   {
     id: 5,
     title: 'PolyHacks 2025 - WildGuard',
-    tech: 'YOLOv8, OpenCV, Python, Flask, PyTorch, Ultralytics',
+    tech: 'YOLOv8, OpenCV, Python, Flask, Twilio, Socket.IO, PyTorch, Ultralytics',
     description: 'Led the development of WildGuard, an AI-powered wildlife monitoring system that detects and classifies animals in real-time using YOLOv8. Engineered data pipelines and a Flask web interface for live video streaming and alerts.',
     image: '/images/hackathon.png',
-    logos: ['/logos/python.svg', '/logos/pytorch.svg', '/logos/yolov8.svg'],
+    logos: ['/logos/yolov8.svg', '/logos/opencv.svg', '/logos/python.svg', '/logos/flask.svg', '/logos/twilio.svg', '/logos/socket-io.svg', '/logos/pytorch.svg'],
     caption: "Look Mom!\nIt's a cat!",
   },
   {
