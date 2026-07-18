@@ -92,7 +92,7 @@ export default function AboutWindow({ windowState, controls, onOpenFigure }) {
                         src={entry.logo}
                           alt=""
                           aria-hidden="true"
-                          style={{ height: '20px', width: 'auto', backgroundColor: '#ffffff', padding: '2px', borderRadius: '4px' }}
+                          style={{ height: '20px', width: 'auto', backgroundColor: entry.backgroundColor || '#ffffff', padding: '2px', borderRadius: '4px' }}
                         />
                     </a>
                   </li>

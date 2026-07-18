@@ -74,8 +74,21 @@ export const aboutFigures = [
 
 export const experienceEntries = [
   {
+    version: '[v1.2] Research Software Intern',
+    date: 'May 2026 - July 2026',
+    location: '@ FIU Center for translational science',
+    accent: false,
+    bullets: [
+      'Built a Python tool to automate combinatorial molecules.',
+      'Exported a validated library of 10,000+ compounds for research.'
+    ],
+    logo: '/logos/fiu-cts.svg',
+    backgroundColor: '#06224c',
+    link: 'https://cts.fiu.edu/',
+  },
+  {
     version: '[v1.1] Software Developer - Capstone Project',
-    date: 'Jan 2026 - May 20266',
+    date: 'Jan 2026 - May 2026',
     location: '@ Hydro-Québec',
     accent: false,
     bullets: [
