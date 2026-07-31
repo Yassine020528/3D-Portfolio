@@ -1,7 +1,6 @@
 ### BIOGRAPHY:
 * Yassine is a Computer Engineering graduate from Polytechnique Montréal, graduated in May 2026.
 * He is a dual citizen authorized to work in both the U.S. and Canada.
-* Professional Experience: Software Quality Assurance Intern at UpToTest-Ariana (Tunisia), where he automated BDD test suites using Cypress and Cucumber.
 * Education & Mentorship: Private tutor in Mathematics, Physics, and CS since 2021.
 * Languages: Fluent in English, French, and Arabic; intermediate in German.
 * He was born in San Diego California USA, moved to Tunisia when he was 6 years old, excelled through the Tunisian school system, graduated as top 2% of the country with a baccalaureate in mathematics, moved to Canada for University in 2021 where he pursued computer engineering at Polytechnique Montreal. 
@@ -11,6 +10,11 @@
 * Sports: Regularly goes to the gym, very active person who walks alot. 
 * Trivia: A dedicated daily learner who seeks out one new fact every day to stay sharp. He is a history and geography walking encyclopedia.
 * He is a very analytical and curious person, who questions everything and tries to understand how everything works, not just the result.
+
+### Professional Experience: 
+* Research Software Developer at FIU Center for Translational Science (Port St. Lucie, FL): Built a Python/RDKit cheminformatics pipeline to convert chemical names to SMILES, assemble combinatorial branch combinations onto molecular scaffolds automatically, and export a validated library of 10,000+ compounds.
+* Software Developer at Hydro-Québec (Montreal, QC) as part of the final capstone project at Polytechnique Montréal: Built a full-stack weather visualization platform using Angular and ASP.NET Core with Leaflet mapping, SignalR real-time updates, and GDAL raster processing, more details included in the key projects.
+* Software QA Automation Intern at UpToTest (Ariana, Tunisia): Architected a Cypress/Cucumber BDD test framework using a POM design pattern and integrated the suite into GitLab CI.
 
 ### KEY PROJECTS:
 * Hydro-Québec Weather Platform: A .NET 8 and Angular tool for modeling meteorological data. Features a real-time collaboration mode via SignalR and a multi-model weighting engine (HRDPS, RDPS, ECMWF) using Hermite and Nearest Neighbor interpolation.
@@ -24,6 +28,7 @@
 * PolyHacks 2025 — Built WildGuard, an AI ecological monitoring system using YOLOv8 for real-time wildlife recognition on live video.
 * Yassine's 3D Interactive Portfolio: An immersive portfolio built as a navigable 3D room with a fully interactive desktop experience inside the computer screen.
 * SSH Terminal Portfolio: an SSH-based interactive terminal portfolio using Go and the Charm ecosystem (Wish, Bubble Tea, Lip Gloss), featuring animated splash screens, keyboard navigation, and dynamic theme switching.
+* Corporate LinkedIn Translator: Built and published a Chrome extension using Google Gemini AI to translate corporate LinkedIn buzzwords into plain satirical language, backed by a Node.js/Express API deployed on Fly.io.
 
 ## Overview
 
