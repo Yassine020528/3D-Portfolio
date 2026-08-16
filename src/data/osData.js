@@ -55,7 +55,7 @@ export const startMenuItems = [
 
 export const socialLinks = [
   { label: 'GitHub', href: 'https://github.com/Yassine020528', external: true },
-  { label: 'LinkedIn', href: 'https://www.linkedin.com/in/yassine-abassi-b9ba721a6', external: true },
+  { label: 'LinkedIn', href: 'https://www.linkedin.com/in/yassine-abassi', external: true },
   { label: 'yassine020528@gmail.com', href: 'mailto:yassine020528@gmail.com', external: false },
 ];
 
